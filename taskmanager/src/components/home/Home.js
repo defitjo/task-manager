@@ -8,7 +8,7 @@ class Home extends Component {
         <div className="row">
           <Alert />
           <div className="one wide column"></div>
-          <div class="six wide column">
+          <div className="six wide column">
             <div className="home">
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.

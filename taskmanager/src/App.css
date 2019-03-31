@@ -13,3 +13,7 @@ body {
   background: rgb(69, 124, 226);
   color: white;
 }
+
+#new-submit {
+  margin-top: 10px;
+}
