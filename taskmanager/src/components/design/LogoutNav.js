@@ -1,17 +1,17 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 
 const LogoutNav = () => {
   return (
     <div className="right menu">
-      <a href="" className="item">
+      <NavLink to='/login' href="" className="item">
         Log-in
-      </a>
-      <a href="" className="item">
+      </NavLink>
+      <NavLink to='/join' href="" className="item">
         Sign Up
-      </a>
+      </NavLink>
     </div>
   );
 };
 
 export default LogoutNav;
-
