@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Alerts = () => {
+const Alerts = (props) => {
+  const { alerts } = props;
   return (
     <div className="ui card">
       <div clasNames="content">
@@ -14,21 +15,13 @@ const Alerts = () => {
           <div className="event">
             <div className="content">
               <div className="summary">
-                <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-          <div className="event">
-            <div className="content">
-              <div className="summary">
-                <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-              </div>
-            </div>
-          </div>
-          <div className="event">
-            <div className="content">
-              <div className="summary">
-                <a>Helen Troy</a> added two pictures
+                { alerts && alerts.map(alert => {
+                  return <li key={alert.id}>
+                    <span>{alert.user}</span>
+                    <span>{alert.content}</span>
+                    <div>{alert.time.toDate().toDateString()}</div>
+                  </li>
+                }) }
               </div>
             </div>
           </div>
