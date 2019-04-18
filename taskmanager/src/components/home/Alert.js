@@ -4,7 +4,7 @@ const Alerts = (props) => {
   const { alerts } = props;
   return (
     <div className="ui card">
-      <div clasNames="content">
+      <div className="content">
         <div className="header">
           <h3 className="header-3">Task Timeline</h3>
         </div>
@@ -18,7 +18,7 @@ const Alerts = (props) => {
                 { alerts && alerts.map(alert => {
                   return <li key={alert.id}>
                     <span>{alert.user}</span>
-                    <span>{alert.content}</span>
+                    <span>{alert.description}</span>
                     <div>{alert.time.toDate().toDateString()}</div>
                   </li>
                 }) }

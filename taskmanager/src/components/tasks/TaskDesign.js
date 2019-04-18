@@ -1,23 +1,14 @@
 import React from 'react';
 
-const TaskDesign = () => {
+const TaskDesign = ({task}) => {
   return (
     <div className="ui cards">
       <div className="card">
         <div className="content">
-          <div className="header">Elliot Fu</div>
-          <div className="meta">Friend</div>
+          <div className="header">{task.title}</div>
+          <div className="meta">New Task by {task.userFirstName} {task.userLastName}</div>
           <div className="description">
-            Elliot Fu is a film-maker from New York.
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <div className="content">
-          <div className="header">Veronika Ossi</div>
-          <div className="meta">Friend</div>
-          <div className="description">
-            Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
+            <span>{task.addedAt.toDate().toDateString()}</span>
           </div>
         </div>
       </div>
