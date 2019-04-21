@@ -17,7 +17,7 @@ const Alerts = (props) => {
               <div className="summary">
                 { alerts && alerts.map(alert => {
                   return <li key={alert.id}>
-                    <span>{alert.user}</span>
+                    <span>{alert.user} </span>
                     <span>{alert.description}</span>
                     <div>{alert.time.toDate().toDateString()}</div>
                   </li>

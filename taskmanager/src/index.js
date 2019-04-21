@@ -14,7 +14,6 @@ import fbConfig from "./config/fbConfig";
 const store = createStore(rootReducer,
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reduxFirestore(fbConfig),
     reactReduxFirebase(fbConfig,
       { 
         userProfile: 'users',
@@ -33,7 +32,7 @@ store.firebaseAuthIsReady.then(() => {
     document.getElementById("root")
   );
   serviceWorker.register();
-})
+});
 
 
 // If you want your app to work offline and load faster, you can change

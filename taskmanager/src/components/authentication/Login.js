@@ -28,9 +28,9 @@ class Login extends Component {
               <h3 className="ui dividing header">Login</h3>
               <div className="field">
                 <label htmlFor="email">Email</label>
-                <input type="email" onChange={this.handleChange} />
+                <input type="email" id="email" onChange={this.handleChange} />
                 <label htmlFor="password">Password</label>
-                <input type="password" onChange={this.handleChange} />
+                <input type="password" id="password" onChange={this.handleChange} />
                 <div>
                   <button className="ui right labeled icon button">
                     <i className="sign-in icon"></i>
