@@ -11,7 +11,7 @@ exports.taskCreated = functions.firestore.document('tasks/{taskId}').onCreate(do
   const task = doc.data();
   const alert = {
     user: `${task.userFirstName} ${task.userLastName}`,
-    description: 'new task added',
+    description: 'added a new task',
     time: admin.firestore.FieldValue.serverTimestamp()
   }
   return newAlert(alert);
@@ -23,7 +23,7 @@ exports.userJoined = functions.auth.user().onCreate(user => {
       const newUser = doc.data();
       const alert = {
         user: `${newUser.firstName} ${newUser.lastName}`,
-        description: 'Signed up',
+        description: 'signed up',
         time: admin.firestore.FieldValue.serverTimestamp()
       };
       return newAlert(alert);

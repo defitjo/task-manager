@@ -17,3 +17,33 @@ body {
 #new-submit {
   margin-top: 10px;
 }
+
+.alert-user {
+  color: rgb(69, 124, 226);
+}
+
+.alert-date, #task-info-date {
+  color: grey;
+}
+
+#task-info-container {
+  margin-top: 10px;
+}
+
+#task-info {
+  background: white;
+  border-radius: 5px;
+}
+
+#task-description {
+  font-size: 1.3em;
+}
+
+#task-info-user {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+#new-task-button, #login-button, #join-button {
+  margin-top: 10px;
+}
