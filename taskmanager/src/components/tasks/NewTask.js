@@ -27,14 +27,14 @@ class NewTask extends Component {
           <div className="two column wide">
             <form className="ui form" onSubmit={this.handleSubmit}>
               <h3 className="ui dividing header">Create Task</h3>
-              <div className="field">
+              <div className="required field">
                 <label htmlFor="title">Title</label>
                 <input type="text" id="title" onChange={this.handleChange} />
                 <label htmlFor="description">Task Description</label>
                 <textarea rows="3" id="description" onChange={this.handleChange} />
 
                 <div>
-                  <button className="ui right labeled icon button">
+                  <button id="new-task-button" className="ui positive right labeled icon button">
                     <i className="tasks icon"></i>
                     Submit
                   </button>

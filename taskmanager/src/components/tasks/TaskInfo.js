@@ -9,28 +9,30 @@ const TaskInfo = (props) => {
   if (!auth.uid) return <Redirect to='/login' />
   if (task) {
     return (
-      <div className="ui cards">
-        <div className="card">
-          <div className="content">
-            <div className="header">{task.title}</div>
-            <div className="description">
-              <p>{task.description}</p>   
-            </div>
-            <div className="meta">
-              <p>New task by {task.userFirstName} {task.userLastName}</p>
-              <p>{task.addedAt.toDate().toDateString()}</p>
-            </div>
+      <div id="task-info-container" className="ui grid container">
+        <div id="task-info" className="five wide column centered">
+          <div className="ui large header">
+            {task.title}
+          </div>
+          <div className="description">
+            <p id="task-description">{task.description}</p>
+          </div>
+          <div id="task-info-user" className="meta">
+            <p>New task by {task.userFirstName} {task.userLastName}</p>
+            <p id="task-info-date">{task.addedAt.toDate().toDateString()}</p>
           </div>
         </div>
       </div>
     )
   } else {
     return (
-      <div className="centered" >
-        <span>Loading...</span>
+      <div className="ui grid container">
+        <div className="two wide column centered">
+          <div className="header">Loading...</div>
+        </div>  
       </div>
     )
-  }
+  }     
 }
 
 const mapStateToProps = (state, ownProps) => {
