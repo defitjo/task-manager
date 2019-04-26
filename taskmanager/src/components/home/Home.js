@@ -12,17 +12,16 @@ class Home extends Component {
     if (!auth.uid) return <Redirect to='/login' />
 
     return (
-      <div className="ui three column stackable centered padded grid">
-        <div className="row">
-          <Alert />
+      <div className="ui stackable centered padded grid container">
+        <div className="three column row">
+          <div className="four wide column">
+            <Alert alerts={alerts} />
+          </div>
           <div className="one wide column"></div>
           <div className="six wide column">
             <div className="home">
               <div>
                 <TaskOrder tasks={tasks} />
-              </div>
-              <div>
-                <Alert alerts={alerts} />
               </div>
             </div>
           </div>
