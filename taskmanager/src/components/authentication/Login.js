@@ -26,13 +26,13 @@ class Login extends Component {
           <div className="two column wide">
             <form className="ui form" onSubmit={this.handleSubmit}>
               <h3 className="ui dividing header">Login</h3>
-              <div className="field">
+              <div className="required field">
                 <label htmlFor="email">Email</label>
                 <input type="email" id="email" onChange={this.handleChange} />
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" onChange={this.handleChange} />
                 <div>
-                  <button className="ui right labeled icon button">
+                  <button id="login-button" className="ui positive right labeled icon button">
                     <i className="sign-in icon"></i>
                     Login
                   </button>

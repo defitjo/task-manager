@@ -6,14 +6,12 @@ import { logout } from '../../store/action_creator/authenticationAction';
 const LoginNav = (props) => {
   return (
     <div className="right menu">
-      <NavLink to='/new'>
-        <a className="item">
-          Create Task
-        </a>
+      <NavLink className="item" to='/new'>
+        Create Task
       </NavLink>
-      <a onClick={props.logout} className="item">
+      <NavLink to='/login' onClick={props.logout} className="item">
         Log-out
-      </a>
+      </NavLink>
     </div>
   );
 };

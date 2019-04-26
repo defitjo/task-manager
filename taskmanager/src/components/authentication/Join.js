@@ -28,7 +28,7 @@ class Join extends Component {
           <div className="two column wide">
             <form className="ui form" onSubmit={this.handleSubmit}>
               <h3 className="ui dividing header">Join Task Manager</h3>
-              <div className="field">
+              <div className="required field">
                 <label htmlFor="firstName">First Name</label>
                 <input type="text" id="firstName" onChange={this.handleChange} />
 
@@ -42,7 +42,7 @@ class Join extends Component {
                 <input type="password" id="password" onChange={this.handleChange} />
 
                 <div>
-                  <button className="ui right labeled icon button">
+                  <button id="join-button" className="ui positive right labeled icon button">
                     <i className="sign-in icon"></i>
                     Join
                   </button>

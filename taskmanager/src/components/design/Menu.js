@@ -14,9 +14,7 @@ const Menu = (props) => {
         Tasker
       </Link>
       <div className="right menu">
-        <a href="" className="item">
-          {links}
-        </a>
+        {links} 
       </div>
     </nav>
   );

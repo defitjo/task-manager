@@ -5,13 +5,11 @@ const initState = {
 const authenticationReducer = (state = initState, action) => {
   switch(action.type) {
     case 'JOIN_SUCCESSFULLY':
-      console.log('join successfully')
       return {
         ...state,
         authError: null
       }
     case 'ERROR_JOINING':
-      console.log('join error')
       return {
         ...state,
         authError: action.error.message
